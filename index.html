@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="mr"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>जप</title> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1><span id="selectedMantra">मंत्र</span></h1> 
+  <div class="container">
+    <label for="mantraSelect">मंत्र निवडा:</label> 
+    <select id="mantraSelect">
+      <option value="ओम गं गणपतये नमः">गणपती बाप्पा</option> 
+      <option value="श्री स्वामी समर्थ">स्वामी समर्थ</option> 
+      <option value="ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्। उर्वारुकमिव बन्धनान मृत्योर्मुक्षीय मामृतात्॥ महादेव मूळ मंत्र: ऊँ नम: शिवाय।।">महादेव</option> 
+      <option value="'ॐ नमो भगवते आंजनेयाय महाबलाय स्वाहा।। ॐ तेजसे नम:।। ॐ प्रसन्नात्मने नम:।। ॐ शूराय नम:।।">हनुमान </option> 
+      <option value="'ॐ श्री गुरुदत्तात्रेय श्रीपाद श्री वल्लभाय नमः">गुरुदेव दत्त </option>
+      <option value=" ईद मेव शिवम, ईद मेव शिवम, ईद मेव शिवम ।। शिव हर शंकर नमामि शंकर शिव शंकर शंभो ।। हे  गिरजापती भवानी शंकर शिव शंकर शंभो ।।"> श्री स्वामी </option>
+      
+    
+    </select>
+    <br>
+    <label for="times">जपाची संख्या:</label> 
+    <input type="number" id="times" min="1" value="1">
+    <button id="countBtn" style="display:none;">गणना++</button> 
+    <button id="startBtn">जप सुरू करा</button> 
+
+    <p>जप चालूचा प्रगती: <span id="progress">0/१०८</span></p> 
+  
+    <p>एकूण जप: <span id="totalChants">०</span></p> 
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
