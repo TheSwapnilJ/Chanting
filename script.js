@@ -5,6 +5,31 @@ const countBtn = document.getElementById('countBtn');
 const progressDisplay = document.getElementById('progress');
 const totalChantsDisplay = document.getElementById('totalChants');
 const selectedMantraDisplay = document.getElementById('selectedMantra');
+const visitorCountDisplay = document.getElementById('visitorCount');
+
+// Function to toggle the visibility of the visitor count
+function toggleVisitorCount() {
+  if (visitorCountDisplay.style.display === 'none') {
+    visitorCountDisplay.style.display = 'inline';
+  } else {
+    visitorCountDisplay.style.display = 'none';
+  }
+}
+
+// Function to increment and display the visitor count
+function incrementVisitorCount() {
+  if (localStorage.getItem('visits')) {
+    let count = parseInt(localStorage.getItem('visits'));
+    count++;
+    localStorage.setItem('visits', count);
+  } else {
+    localStorage.setItem('visits', 1);
+  }
+  visitorCountDisplay.textContent = localStorage.getItem('visits');
+}
+
+// Call the function to increment and display the visitor count
+incrementVisitorCount();
 
 startBtn.addEventListener('click', () => {
   const selectedMantra = mantraSelect.value;
@@ -41,7 +66,6 @@ function startChanting(mantra, timesToChant) {
     }
   });
 
-  // Display the selected mantra in big and bold text
   selectedMantraDisplay.textContent = mantra;
   selectedMantraDisplay.style.fontSize = '24px';
   selectedMantraDisplay.style.fontWeight = 'bold';
@@ -52,3 +76,4 @@ function resetUI() {
   countBtn.style.display = 'none';
   progressDisplay.textContent = '0/0'; // Reset progress display
 }
+

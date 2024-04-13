@@ -73,6 +73,30 @@ input[type="number"] {
   #progress {
     text-align: center;
   }
+
+  .eye-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  
+  #visitor {
+    position: fixed;
+    top: 20px; 
+    right: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right; /* Align content to the right */
+  }
+  
+  #visitor span {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  /* Add this to position the visitor count container on the right side */
   
   @media screen and (max-width: 600px) {
     body {
