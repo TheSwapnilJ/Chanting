@@ -18,14 +18,16 @@ function toggleVisitorCount() {
 
 // Function to increment and display the visitor count
 function incrementVisitorCount() {
-  if (localStorage.getItem('visits')) {
-    let count = parseInt(localStorage.getItem('visits'));
-    count++;
-    localStorage.setItem('visits', count);
-  } else {
-    localStorage.setItem('visits', 1);
+  if (!localStorage.getItem('totalVisits')) {
+    localStorage.setItem('totalVisits', '0');
   }
-  visitorCountDisplay.textContent = localStorage.getItem('visits');
+
+  let totalVisits = parseInt(localStorage.getItem('totalVisits'));
+  totalVisits++;
+  localStorage.setItem('totalVisits', totalVisits);
+
+  // Update the displayed total visit count
+  visitorCountDisplay.textContent = totalVisits;
 }
 
 // Call the function to increment and display the visitor count
@@ -76,4 +78,3 @@ function resetUI() {
   countBtn.style.display = 'none';
   progressDisplay.textContent = '0/0'; // Reset progress display
 }
-

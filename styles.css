@@ -1,4 +1,11 @@
 
+header {
+  background-color: #4CAF50; /* Green background color */
+  color: rgb(89, 3, 3); /* White text color */
+  padding: 10px; 
+  margin-bottom: 20px;/* Add some padding for better spacing */
+}
+
   h1 {
     text-align: center;
   }
@@ -28,7 +35,7 @@ input[type="number"]:focus {
 }
 
 select {
-  background-color: white;
+  background-color: rgb(243, 239, 239);
 }
 
 input[type="number"] {
@@ -39,7 +46,7 @@ input[type="number"] {
   button {
     padding: 20px 20px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(244, 237, 237);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -76,9 +83,13 @@ input[type="number"] {
 
   .eye-icon {
     cursor: pointer;
-    font-size: 20px;
-    margin-left: 5px;
+    font-size: 14px; /* Adjust the font size */
+    position: absolute; /* Make the eye icon position absolute */
+    top: 10px; /* Adjust the top position of the eye icon */
+    right: 10px; /* Adjust the right position of the eye icon */
+    border: 1px solid #f11818;
   }
+  
   
   #visitor {
     position: fixed;
@@ -110,4 +121,18 @@ input[type="number"] {
     button {
         padding: 15px 15px;
     }
+}
+footer {
+  background-color: #333; /* Dark gray background color */
+  color: white; /* White text color */
+  padding: 10Spx; /* Add some padding for better spacing */
+  text-align: center; /* Center align text in the footer */
+}
+.footer-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+.footer-content span {
+  margin-left: 50px; /* Add margin between spans */
 }
